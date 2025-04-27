@@ -1,0 +1,9 @@
+<div class="transaction-item" [ngClass]="transaction.type">
+  <div>
+    <strong>{{ transaction.categoryId }}</strong>
+    <span>{{ transaction.date | date }}</span>
+  </div>
+  <div class="amount">
+    {{ transaction.type === 'income' ? '+' : '-' }}{{ transaction.amount | number:'1.2-2' }}
+  </div>
+</div>
