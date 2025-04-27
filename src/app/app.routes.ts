@@ -3,6 +3,7 @@ import {HomeComponent} from './features/home/home.component';
 import {TransactionFormComponent} from './features/transaction-form/transaction-form.component';
 import {TransactionHistoryComponent} from './features/transaction-history/transaction-history.component';
 import {StatisticsComponent} from './features/statistics/statistics.component';
+import {SettingsComponent} from './features/settings/settings.component';
 import {NgModule} from '@angular/core';
 
 export const routes: Routes = [
@@ -10,6 +11,7 @@ export const routes: Routes = [
   {path: 'transaction-form', component: TransactionFormComponent},
   {path: 'transaction-history', component: TransactionHistoryComponent},
   {path: 'statistics', component: StatisticsComponent},
+  {path: 'settings', component: SettingsComponent},
   {path: '**', redirectTo: ''}
 ];
 
