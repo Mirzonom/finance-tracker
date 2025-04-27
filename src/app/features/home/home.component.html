@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="home">
+  <h2>Текущий баланс: {{ balance | number:'1.2-2' }}</h2>
+  <p>Доходы: +{{ income | number:'1.2-2' }}</p>
+  <p>Расходы: -{{ expense | number:'1.2-2' }}</p>
+
+  <a routerLink="/transaction-history">История транзакций</a> |
+  <a routerLink="/statistics">Статистика</a>
+</div>
