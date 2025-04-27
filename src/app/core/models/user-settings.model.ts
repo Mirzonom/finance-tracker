@@ -1,4 +1,4 @@
 export interface UserSettings {
-  preferredCurrency: string;
-  language: string;
+  preferredCurrency: string | undefined;
+  language: string | undefined;
 }

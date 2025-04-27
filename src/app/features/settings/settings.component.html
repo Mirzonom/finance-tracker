@@ -1,1 +1,20 @@
-<p>settings works!</p>
+<div class="settings">
+  <h2>Настройки</h2>
+
+  <div class="form-group">
+    <label for="currency">Выберите валюту:</label>
+    <select id="currency" [(ngModel)]="selectedCurrency" class="form-control">
+      <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="language">Выберите язык:</label>
+    <select id="language" [(ngModel)]="selectedLanguage" class="form-control">
+      <option *ngFor="let language of languages" [value]="language">{{ language }}</option>
+    </select>
+  </div>
+
+  <button (click)="saveSettings()" class="btn btn-primary">Сохранить</button>
+  <button (click)="resetSettings()" class="btn btn-secondary">Сбросить</button>
+</div>
