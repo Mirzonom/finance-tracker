@@ -1,1 +1,8 @@
-<p>transaction-form works!</p>
+<form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+  <app-select [label]="'Тип транзакции'" [options]="transactionTypes" [control]="transactionForm.get('type')"></app-select>
+  <app-select [label]="'Категория'" [options]="categories" [control]="transactionForm.get('categoryId')"></app-select>
+  <app-input [label]="'Сумма'" type="number" [control]="transactionForm.get('amount')"></app-input>
+  <app-input [label]="'Дата'" type="date" [control]="transactionForm.get('date')"></app-input>
+
+  <app-button type="submit" color="primary">Добавить транзакцию</app-button>
+</form>
